@@ -1,0 +1,26 @@
+{
+  "name": "email-human-ml-ts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HTTP API that scores how human-like an email address looks, using an ONNX model",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "dev": "node --watch src/server.ts",
+    "test": "node --test 'test/**/*.test.ts'",
+    "typecheck": "tsc --noEmit",
+    "sync-model": "sh scripts/sync-model.sh"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.5",
+    "hono": "^4.13.13",
+    "onnxruntime-node": "^1.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
